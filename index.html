@@ -102,15 +102,6 @@
             display: block;
         }
 
-        /* Decorative tag */
-        .tag {
-            display: inline-block;
-            background: #5a4745;
-            padding: 6px 12px;
-            border-radius: 15px;
-            font-size: 13px;
-            margin-top: 10px;
-        }
 
         footer {
             text-align: center;
@@ -119,60 +110,10 @@
             font-size: 14px;
         }
 
-        /* FLOATING PIXEL HEARTS */
-
-        .floating-icons {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .pixel {
-            position: absolute;
-            width: 35px;
-            opacity: 0.7;
-            animation: float 15s linear infinite;
-        }
-
-        .pixel:nth-child(1) {
-            left: 10%;
-            animation-duration: 18s;
-        }
-
-        .pixel:nth-child(2) {
-            left: 40%;
-            animation-duration: 22s;
-        }
-
-        .pixel:nth-child(3) {
-            left: 75%;
-            animation-duration: 20s;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(100vh) rotate(0deg);
-            }
-            100% {
-                transform: translateY(-150px) rotate(360deg);
-            }
-        }
-
     </style>
 </head>
 
 <body>
-
-<!-- FLOATING PIXELS -->
-<div class="floating-icons">
-    <img src="https://i.imgur.com/YV6XGQm.png" class="pixel">
-    <img src="https://i.imgur.com/YV6XGQm.png" class="pixel">
-    <img src="https://i.imgur.com/YV6XGQm.png" class="pixel">
-</div>
 
 <div class="container">
 
@@ -200,7 +141,7 @@
 
         <!-- IMAGE SECTION -->
         <div class="card image-card">
-            <img src="images/flower.jpg" class="profile-pic">
+            <img src="image/flower.jpg" class="profile-pic" alt="">
         </div>
 
     </div>
