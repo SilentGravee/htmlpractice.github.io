@@ -17,6 +17,32 @@
             overflow-x: hidden;
         }
 
+        /* FULL WIDTH HEADER */
+        .header-wrapper {
+            width: 100%;
+            background: white;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+
+        .header {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 18px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #5a4745;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+
+        .search-box {
+            background: #f4e6ea;
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
         /* Container */
         .container {
             max-width: 1100px;
@@ -24,25 +50,7 @@
             padding: 20px;
         }
 
-        /* Header */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 50px;
-            color: #d8b4b4;
-            font-size: 14px;
-            letter-spacing: 1px;
-        }
-
-        .search-box {
-            background: rgba(255,255,255,0.08);
-            padding: 8px 18px;
-            border-radius: 20px;
-            backdrop-filter: blur(6px);
-        }
-
-        /* Title Section */
+        /* Title */
         .profile-title {
             font-size: 64px;
             margin: 0;
@@ -54,7 +62,7 @@
             font-family: 'Patrick Hand', cursive;
             font-size: 24px;
             color: #e4a9b4;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
         /* Grid Layout */
@@ -89,7 +97,6 @@
             letter-spacing: 1px;
         }
 
-        /* Labels */
         .label {
             color: #f2b6c2;
             font-weight: 500;
@@ -99,8 +106,7 @@
         .image-card {
             padding: 0;
             overflow: hidden;
-            height: 526px;
-            width: 564px;
+            height: 420px;
         }
 
         .profile-pic {
@@ -111,7 +117,7 @@
             display: block;
         }
 
-        /* Single Full Width Card */
+        /* Full Width Card */
         .full-card {
             margin-bottom: 30px;
         }
@@ -124,12 +130,19 @@
             color: #c9a9a6;
         }
 
+        /* Responsive */
         @media (max-width: 900px) {
             .grid {
                 grid-template-columns: 1fr;
             }
+
             .profile-title {
                 font-size: 42px;
+            }
+
+            .header {
+                flex-direction: column;
+                gap: 10px;
             }
         }
 
@@ -138,14 +151,17 @@
 
 <body>
 
-<div class="container">
-
+<!-- FULL WIDTH WHITE HEADER -->
+<div class="header-wrapper">
     <div class="header">
         <div>home • profile • portfolio • contact</div>
         <div class="search-box">SilentGravee.github.io</div>
     </div>
+</div>
 
-    <h1 class="profile-title">Tracy ♡</h1>
+<div class="container">
+
+    <h1 class="profile-title">My Profile ♡</h1>
     <div class="subtitle">Doubt kills more dreams than failure ever will.</div>
 
     <div class="grid">
@@ -159,7 +175,7 @@
         </div>
 
         <div class="card image-card">
-            <!-- MAKE SURE YOUR FOLDER IS NAMED images NOT image -->
+            <!-- MAKE SURE YOUR FOLDER NAME MATCHES -->
             <img src="image/photo.jpg" class="profile-pic" alt="">
         </div>
 
