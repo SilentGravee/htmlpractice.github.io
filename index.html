@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile ♡</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Patrick+Hand&display=swap" rel="stylesheet">
@@ -130,6 +129,30 @@
             color: #c9a9a6;
         }
 
+        /* Music Button */
+        .music-player {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+        }
+
+        .music-player button {
+            background: #ffc9d6;
+            color: #5a4745;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-family: 'Patrick Hand', cursive;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            transition: 0.3s ease;
+        }
+
+        .music-player button:hover {
+            transform: scale(1.05);
+        }
+
         /* Responsive */
         @media (max-width: 900px) {
             .grid {
@@ -180,7 +203,6 @@
         </div>
 
         <div class="card image-card">
-            <!-- MAKE SURE YOUR FOLDER NAME MATCHES -->
             <img src="image/photo.jpg" class="profile-pic" alt="">
         </div>
 
@@ -214,6 +236,28 @@
     </footer>
 
 </div>
+
+<!-- MUSIC PLAYER -->
+<div class="music-player">
+    <button id="musicBtn">♡ Play Music</button>
+</div>
+
+<audio id="bgMusic" src="audio/background.mp3" loop></audio>
+
+<script>
+    const musicBtn = document.getElementById("musicBtn");
+    const bgMusic = document.getElementById("bgMusic");
+
+    musicBtn.addEventListener("click", () => {
+        if (bgMusic.paused) {
+            bgMusic.play();
+            musicBtn.textContent = "♡ Pause Music";
+        } else {
+            bgMusic.pause();
+            musicBtn.textContent = "♡ Play Music";
+        }
+    });
+</script>
 
 </body>
 </html>
